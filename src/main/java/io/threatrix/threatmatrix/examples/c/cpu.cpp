@@ -1,3 +1,4 @@
+REMOVE
 /*
  *  Copyright (C) 2002-2010  The DOSBox Team
  *
