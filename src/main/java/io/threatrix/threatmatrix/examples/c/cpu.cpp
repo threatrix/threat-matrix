@@ -2417,4 +2417,5 @@ void CPU_Init(Section* sec) {
 	sec->AddDestroyFunction(&CPU_ShutDown,true);
 }
 //initialize static members
+REMOVE
 bool CPU::inited=false;
