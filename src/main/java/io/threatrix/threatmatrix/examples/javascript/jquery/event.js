@@ -1,3 +1,22 @@
+/*
+*    ------ BEGIN LICENSE ATTRIBUTION ------
+*    
+*    Portions of this file have been appropriated or derived from the following project(s) and therefore require attribution to the original licenses and authors.
+*    
+*    Release: https://github.com/spring-projects/spring-boot/releases/tag/v1.5.19.RELEASE
+*    Source File: jquery-1.7.2.js
+*    
+*    Copyrights:
+*      copyright 2011, john resig
+*    
+*    Licenses:
+*      Apache License 2.0
+*      SPDXId: Apache-2.0
+*    
+*    Auto-attribution by Threatrix, Inc.
+*    
+*    ------ END LICENSE ATTRIBUTION ------
+*/
 (function( jQuery ) {
 
 var rnamespaces = /\.(.*)$/,
