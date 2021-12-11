@@ -1,3 +1,22 @@
+/*
+*    ------ BEGIN LICENSE ATTRIBUTION ------
+*    
+*    Portions of this file have been appropriated or derived from the following project(s) and therefore require attribution to the original licenses and authors.
+*    
+*    Release: https://github.com/spring-projects/spring-boot/releases/tag/v0.5.0.M2
+*    Source File: jquery.js
+*    
+*    Copyrights:
+*      copyright 2005, 2013 jquery foundation, inc. and other contributors
+*    
+*    Licenses:
+*      MIT License
+*      SPDXId: MIT
+*    
+*    Auto-attribution by Threatrix, Inc.
+*    
+*    ------ END LICENSE ATTRIBUTION ------
+*/
 /*!
  * jQuery JavaScript Library v1.10.1
  * http://jquery.com/
