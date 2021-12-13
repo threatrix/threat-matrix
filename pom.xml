@@ -18,7 +18,7 @@
 
 
     <dependencies>
-             <!--
+             
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -57,7 +57,7 @@
             <version>5.5.1</version>
         </dependency>
 
--->
+
 
             
          <dependency>
@@ -65,7 +65,7 @@
              <artifactId>log4j-core</artifactId>
              <version>2.13.2</version>
          </dependency>
- <!--
+ 
              
         <dependency>
             <groupId>org.apache.jena</groupId>
@@ -142,7 +142,7 @@
             <version>1.2.0</version>
         </dependency>
 
--->
+
     </dependencies>
 
     <build>
