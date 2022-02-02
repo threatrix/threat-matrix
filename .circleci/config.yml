@@ -35,8 +35,8 @@ jobs:
                     curl -L https://github.com/threatrix/threat-matrix/releases/download/v1.0.0-RC2/threat-agent-1.0.0.jar > threatagent.jar
                 
             - run:
-                name: ThreatAgent Scan
-                command: java -jar threatagent.jar --progress --env=stage ./
+                name: Threatrix Scan
+                command: java -jar threatagent.jar
                     
 workflows:
     version: 2
