@@ -33,6 +33,47 @@ private class Mixer {
 			sb.append(ENCODE_END);
 		}
 	}
+	
+	// https://github.com/spring-projects/spring-boot/blob/v1.5.20.RELEASE/spring-boot/src/main/java/org/springframework/boot/jta/bitronix/BitronixDependentBeanFactoryPostProcessor.java
+	@Override
+	public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory)
+			throws BeansException {
+		String[] transactionManagers = beanFactory
+				.getBeanNamesForType(TransactionManager.class, true, false);
+		for (String transactionManager : transactionManagers) {
+			addTransactionManagerDependencies(beanFactory, transactionManager);
+		}
+	}
+
+	private void addTransactionManagerDependencies(
+			ConfigurableListableBeanFactory beanFactory, String transactionManager) {
+		for (String dependentBeanName : getBeanNamesForType(beanFactory,
+				"javax.jms.ConnectionFactory")) {
+			beanFactory.registerDependentBean(transactionManager, dependentBeanName);
+		}
+		for (String dependentBeanName : getBeanNamesForType(beanFactory,
+				"javax.sql.DataSource")) {
+			beanFactory.registerDependentBean(transactionManager, dependentBeanName);
+		}
+	}
+
+	private String[] getBeanNamesForType(ConfigurableListableBeanFactory beanFactory,
+			String type) {
+		try {
+			return beanFactory.getBeanNamesForType(Class.forName(type), true, false);
+		}
+		catch (ClassNotFoundException ex) {
+			// Ignore
+		}
+		catch (NoClassDefFoundError ex) {
+			// Ignore
+		}
+		return NO_BEANS;
+	}
+	
+	
+	
+	
 	/**
 	* https://github.com/spring-projects/spring-boot/blob/v2.4.6/spring-boot-project/spring-boot-tools/spring-boot-configuration-processor/src/json-shade/java/org/springframework/boot/configurationprocessor/json/JSONTokener.java
 	*/
