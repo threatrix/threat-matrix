@@ -65,7 +65,7 @@
          </dependency>
              
              
-<!--
+      <!--
          <dependency>
              <groupId>org.apache.logging.log4j</groupId>
              <artifactId>log4j-core</artifactId>
@@ -120,7 +120,7 @@
         <dependency>
             <groupId>org.jsoup</groupId>
             <artifactId>jsoup</artifactId>
-            <version>1.7.2</version>
+            <version>1.16.1</version>
         </dependency>
 
         <dependency>
